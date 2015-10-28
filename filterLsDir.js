@@ -1,7 +1,13 @@
 var fs = require('fs');
-var path = process.argv[2];
+var path = require('path');
+var filePath = process.argv[2];
 var extensionToFilter = process.argv[3];
-fs.readadir(path, function(){
+var answerArray = [];
+fs.readdir(filePath, function(err, files){
+	files.forEach(function(element, index, array){
+		if(path.extname(element) === '.' + extensionToFilter){
+			answerArray.push(element);
+			console.log(element);
+		}		
+	})
 });
-console.log(path);
-console.log(extensionToFilter);
