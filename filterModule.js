@@ -8,5 +8,7 @@ filterModule(filePath, extensionToFilter, function(err, files){
 	if (err){
 		return console.error('Bad news:', err)	
 	}
+	//consoling the answerArray
+	console.log(files);
 });
 

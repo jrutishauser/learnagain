@@ -15,7 +15,6 @@ fs.readdir(filePath, function(err, files){
 	files.forEach(function(element, index, array){
 		if(path.extname(element) === '.' + extensionToFilter){
 			answerArray.push(element);
-			console.log(element);
 		}		
 	})
 	callback(null, answerArray);
